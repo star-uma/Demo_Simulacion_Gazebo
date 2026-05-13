@@ -1,0 +1,14 @@
+teleop_twist_joy_node:
+  ros__parameters:
+    axis_linear:
+      x: 1            # Stick izquierdo (arriba/abajo)
+    scale_linear:
+      x: 0.5          # Velocidad lineal máx (m/s)
+    axis_angular:
+      yaw: 0          # Stick izquierdo (izq/der)
+    scale_angular:
+      yaw: 1.5        # Velocidad angular máx (rad/s)
+    enable_button: 4  # Botón LB (Deadman switch)
+    enable_turbo_button: 5 # Botón RB (Turbo)
+    scale_linear_turbo:
+      x: 1.5        # Velocidad lineal máx en turbo (m/s)
