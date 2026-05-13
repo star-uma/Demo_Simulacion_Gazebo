@@ -38,7 +38,6 @@ Visualization Manager:
       Show Arrows: true
       Show Axes: true
       Show Names: true
-    # AQUÍ ESTABA EL ERROR: Fíjate en los dos espacios de sangría debajo del guion
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds: true
@@ -60,6 +59,18 @@ Visualization Manager:
         Value: /scan
       Use Fixed Frame: true
       Use rainbow: true
+    - Class: rviz_default_plugins/Image        # ← AÑADIDO
+      Enabled: true
+      Name: Image
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /depth_camera/image_raw              # ← ajusta al topic real
+      Overlay Alpha: 0.5
+      Queue Size: 2
+      Zoom Factor: 1
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -69,9 +80,9 @@ Visualization Manager:
   Tools:
     - Class: rviz_default_plugins/Interact
       Hide Inactive Objects: true
-    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/MoveImage
     - Class: rviz_default_plugins/Select
-    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/FocusImage
     - Class: rviz_default_plugins/Measure
       Line color: 128; 128; 0
   Transformation:
