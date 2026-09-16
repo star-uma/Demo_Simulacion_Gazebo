@@ -72,6 +72,9 @@
     </inertial>
   </link>
 
+  <gazebo reference="base_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
 
     <!-- Robot Footprint -->
   <link name="base_footprint"/>
@@ -108,6 +111,10 @@
 
       <xacro:cylinder_inertia m="0.5" r="${wheel_radius}" h="${wheel_width}"/>
     </link>
+
+    <gazebo reference="${prefix}_link">
+      <material>Gazebo/Turquoise</material>
+    </gazebo>
 
     <joint name="${prefix}_joint" type="continuous">
       <parent link="base_link"/>
